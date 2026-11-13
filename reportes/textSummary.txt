@@ -1,0 +1,46 @@
+﻿RESUMEN DE PRUEBA DE RENDIMIENTO
+================================
+
+Endpoint: POST https://fakestoreapi.com/auth/login
+Herramienta: k6 v2.3.0
+Duración: 60 segundos
+Tipo de ejecución: constant-arrival-rate
+Tasa configurada: 21 iteraciones por segundo
+
+RESULTADOS
+----------
+Solicitudes completadas: 1261
+Tasa real de solicitudes: 20.868066 solicitudes/segundo
+Tiempo promedio: 388.92 ms
+Tiempo mínimo: 335.17 ms
+Tiempo máximo: 1.31 s
+Mediana: 377.9 ms
+Percentil 90 (p90): 424.76 ms
+Percentil 95 (p95): 448.42 ms
+
+ERRORES Y VALIDACIONES
+---------------------
+Solicitudes HTTP fallidas: 0 (0%)
+Fallos funcionales de login: 0 (0%)
+Checks exitosos: 2522 de 2522 (100%)
+Iteraciones descartadas: 0
+
+CRITERIOS DE ACEPTACION
+-----------------------
+Rendimiento minimo: 20 solicitudes por segundo.
+Resultado: CUMPLE (20.87 solicitudes por segundo).
+
+Tiempo maximo permitido: 1.5 segundos.
+Resultado: CUMPLE (tiempo maximo observado: 1.31 segundos).
+
+Porcentaje de errores permitido: menor al 3%.
+Resultado: CUMPLE (0%).
+
+CONCLUSION
+----------
+La ejecucion cumplio los criterios establecidos para la prueba.
+Se completaron 1261 solicitudes durante aproximadamente 60 segundos,
+con una tasa real de 20.87 solicitudes por segundo, sin errores HTTP,
+sin fallos funcionales y sin iteraciones descartadas.
+
+Archivo de resultados original: resumen-prueba-final.json

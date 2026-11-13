@@ -1,0 +1,31 @@
+﻿CONCLUSIONES - PRUEBA DE RENDIMIENTO
+
+1. OBJETIVO
+Evaluar el rendimiento del servicio de login de FakeStore API mediante una prueba de carga con k6.
+
+2. HALLAZGOS
+- Se verifico que el servicio responde exitosamente con codigo HTTP 201 para las credenciales validas.
+- Se identifico que las credenciales user/passwd suministradas inicialmente no fueron aceptadas por el servicio.
+- Se utilizaron cinco cuentas validas para ejecutar la prueba.
+- Fue necesario ajustar la validacion del script para reconocer el codigo HTTP 201 como respuesta exitosa.
+
+3. RESULTADOS
+- Solicitudes completadas: 1261.
+- Rendimiento: 20.87 solicitudes por segundo.
+- Tiempo promedio: 388.92 ms.
+- Tiempo maximo: 1.31 segundos.
+- Percentil 95: 448.42 ms.
+- Porcentaje de errores HTTP: 0%.
+- Fallos funcionales: 0%.
+- Iteraciones descartadas: 0.
+
+4. CONCLUSION
+La prueba cumplio los criterios de aceptacion establecidos.
+El rendimiento supero las 20 solicitudes por segundo y los tiempos de respuesta se mantuvieron por debajo de 1.5 segundos.
+No se registraron errores HTTP, fallos funcionales ni iteraciones descartadas.
+
+5. RECOMENDACIONES
+- Mantener las credenciales parametrizadas mediante archivos CSV.
+- Validar previamente las credenciales antes de ejecutar pruebas de carga.
+- Conservar los reportes de cada ejecucion para comparar resultados.
+- Repetir las pruebas periodicamente para detectar posibles degradaciones.

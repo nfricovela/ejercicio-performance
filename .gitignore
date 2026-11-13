@@ -1,0 +1,8 @@
+﻿.git/
+*.log
+*.tmp
+node_modules/
+
+# Archivos locales con credenciales
+data/usuarios.csv
+scripts/login-diagnostico.js
